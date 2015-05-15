@@ -1,33 +1,20 @@
 #include <iostream>
 using namespace std;
 int main() {
-   int n1, n2,n3, aux;
-   cin >> n1 >> n2 >> n3;
-
-   if (n1 > n2){
-      aux = n2
-      n2 = n1
-      n1 = aux
-
-    }
-
-
-    if (n1 > n3 ){
-     aux = n3
-     n3 = n1
-     n1 = aux
-
-    }
-
-
-    if (n2 > n3){
-
-        aux = n3
-        n3 = n2
-        n2 = aux
-
-    }
-
-   cout << n1 << endl << n2 << endl << n3 << endl;
+   int num_1, num_2,num_3, aux;
+   cin >> num_1 >> num_2 >> num_3;
+   while (( num_1 >num_2 ) || ( num_2 > num_3 )) {
+      if (num_1 > num_2) {
+         aux = num_1;
+         num_1 = num_2;
+         num_2 = aux;
+      }
+      if (num_2 > num_3) {
+         aux = num_2;
+         num_2 = num_3;
+         num_3 = aux;
+      }
+   }
+   cout << num_1 << endl << num_2 << endl << num_3 << endl;
    return 0;
 }
